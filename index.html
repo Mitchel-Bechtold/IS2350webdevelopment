@@ -10,14 +10,132 @@
 <body>
 
 <div class="container-fluid p-5 bg-primary text-white text-center">
-  <h1>David Li</h1>
+  <h1>Mitchel Bechtold</h1>
   <p>Web passion!</p>
-  
 </div>
-<div class="containe p-5 bg-primary text-white text-center">
 
-  <h2>Current position</h2>
-  <p> Professor at Indianatech</p>
+<div class="container my-5">
+
+  <!-- About -->
+  <section class="mb-5">
+    <h2>About Me</h2>
+    <p>
+      I'm a junior at Indiana Institute of Technology studying Information Technology with a focus on
+      cybersecurity. Before college, I spent five years in U.S. Air Force Security Forces, where I built a
+      foundation in disciplined operations, access control, and incident response under pressure. I later
+      worked as an IT support technician, troubleshooting hardware, software, and connectivity issues for
+      end users. Today I combine that background with hands-on networking and security work through my
+      home lab and my university's competitive cybersecurity team.
+    </p>
+  </section>
+
+  <!-- Education -->
+  <section class="mb-5">
+    <h2>Education</h2>
+    <h4>Indiana Institute of Technology &mdash; Fort Wayne, IN</h4>
+    <p>B.S. in Information Technology (Cybersecurity Focus) &mdash; Junior, In Progress</p>
+    <ul>
+      <li>Algorithm analysis &mdash; Big-O notation and time complexity</li>
+      <li>Foundational science coursework &mdash; organic chemistry, physics (Newton's laws, Ohm's law, thermodynamics)</li>
+      <li>Member, university competitive cybersecurity team</li>
+    </ul>
+  </section>
+
+  <!-- Experience -->
+  <section class="mb-5">
+    <h2>Experience</h2>
+
+    <h4>Security Forces &mdash; U.S. Air Force</h4>
+    <p class="text-muted">5 Years of Service</p>
+    <ul>
+      <li>Enforced access control and physical security protocols across high-stakes, secure environments</li>
+      <li>Responded to security incidents under pressure using structured, procedure-driven decision-making</li>
+      <li>Operated within strict rules of engagement and reporting standards</li>
+    </ul>
+
+    <h4>IT Support Technician</h4>
+    <ul>
+      <li>Diagnosed and resolved hardware, software, and connectivity issues for end users</li>
+      <li>Applied structured troubleshooting methodology to identify root causes and minimize downtime</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section class="mb-5">
+    <h2>Projects</h2>
+
+    <h4>University Cyber Team &mdash; Layer 3 Switch &amp; VLAN Segmentation</h4>
+    <p>
+      Configured an FS S5850-24B4C Layer 3 switch on FSOS for the university's competitive cybersecurity
+      team, implementing VLAN segmentation to separate the cyber team subnet from the VM access subnet.
+    </p>
+    <ul>
+      <li>Designed and deployed VLANs for network segmentation and traffic isolation</li>
+      <li>Configured Layer 3 switching and inter-VLAN routing on FSOS</li>
+    </ul>
+
+    <h4>Home Lab &mdash; pfSense, VLANs &amp; Enterprise Wi-Fi</h4>
+    <p>Built and documented a personal home lab for hands-on networking and security practice.</p>
+    <ul>
+      <li>Deployed pfSense as a firewall/router and configured VLANs for network segmentation</li>
+      <li>Set up enterprise-grade Wi-Fi within the lab environment</li>
+      <li>Authored study guides covering networking fundamentals, firewall rules, and Git/GitHub/VS Code workflows</li>
+    </ul>
+  </section>
+
+  <!-- Skills -->
+  <section class="mb-5">
+    <h2>Skills</h2>
+    <ul class="list-inline">
+      <li class="list-inline-item badge bg-primary p-2">Networking Fundamentals</li>
+      <li class="list-inline-item badge bg-primary p-2">VLAN Segmentation</li>
+      <li class="list-inline-item badge bg-primary p-2">Layer 3 Switching</li>
+      <li class="list-inline-item badge bg-primary p-2">pfSense</li>
+      <li class="list-inline-item badge bg-primary p-2">Firewall Configuration</li>
+      <li class="list-inline-item badge bg-primary p-2">Git / GitHub</li>
+      <li class="list-inline-item badge bg-primary p-2">HTML5 / Bootstrap 5</li>
+      <li class="list-inline-item badge bg-primary p-2">Incident Response</li>
+    </ul>
+  </section>
+
+  <!-- Certifications -->
+  <section class="mb-5">
+    <h2>Certifications</h2>
+    <ul>
+      <li>CompTIA Security+ (SY0-701) &mdash; In Progress</li>
+      <li>Cisco CCNA (200-301) &mdash; Planned</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section class="mb-5">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Contact me</button>
+    </form>
+  </section>
+
 </div>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // stop the page from reloading since there's no backend to submit to
+
+    var fullName = document.getElementById('fullName').value;
+    var message = document.getElementById('message').value;
+
+    console.log('Full Name:', fullName);
+    console.log('Message:', message);
+  });
+</script>
+
 </body>
 </html>
